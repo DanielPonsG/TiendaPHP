@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="JavaScript">
+      function mueveReloj(){
+          momentoActual = new Date()
+          hora = momentoActual.getHours()
+          minuto = momentoActual.getMinutes()
+          segundo = momentoActual.getSeconds()
+      
+          horaImprimible = hora + " : " + minuto + " : " + segundo
+      
+          document.form_reloj.reloj.value = horaImprimible
+      
+          setTimeout("mueveReloj()",1000)
+      }
+      </script>
+    <title>Tienda</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="tienda.php">Tienda</a>
+            <a href="#">Iniciar Sesión</a>
+            <a href="#">Carrito</a>
+            <a href="#">Comprar</a>
+        </nav>
+        </div>
+        <hr>
+        <header class="content header">
+            <h2 class="title">Contenido</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum, tempora, omnis facilis ducimus maiores accusamus optio reprehenderit asperiores, consequuntur unde. Sit quo deleniti quaerat incidunt? Tempora vero facilis porro.</p>
+            <div class="btn-home">
+                <a class="btn" href="tienda.php">Ir a Tienda</a>
+                
+            </div>
+            <body onload="mueveReloj()">              
+              <form name="form_reloj">
+              <input style="background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 8pt; text-align : center;" type="text" name="reloj" size="10">
+              </form>
+        </header>
+        <hr>
+        <section class="content about">
+            <h2 class="title">Nosotros</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ea ipsa dolorum, accusantium modi deleniti expedita doloribus quod hic praesentium dignissimos quo maxime esse consequuntur repellendus natus nihil sit officia?</p>
+        </section>
+        <hr>
+        <section class="content price">
+            <article class="contain">
+            <h2 class="title">Precio</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore pariatur placeat non, accusantium voluptatibus in obcaecati nulla similique possimus, maiores veniam incidunt eius sint voluptate ut, libero ad adipisci amet!</p>
+            </article>    
+        </section>
+        <section class="contact_section layout_padding">
+          <div class="container">
+            <div class="d-flex ">
+              <h2>
+                Contacto
+              </h2>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+      
+                <form action="https://formsubmit.co/danielpons44@gmail.com" method="post" name="Contact">
+                  <div class="contact_form-container">
+                    <div>
+                      <div>
+                        <input type="text" placeholder="Nombre " name="name" id="name" class="name">
+                      </div>
+                      <div>
+                        <input type="text" placeholder="Numero de telefono" name="phone" id="phone" class="phone">
+                      </div>
+                      <div>
+                        <input type="email" placeholder="Email" name="mail" id="mail" class="mail">
+                      </div>
+                      <div class="mt-5">
+                        <input type="text" placeholder="Mensaje" name="message" id="message" class="message">
+                      </div>
+                      <div class="mt-5">
+                        <button type="submit">
+                          Eviar
+                        </button>
+                      </div>
+                    </div>
+      
+                  </div>
+      
+                </form>
+              </div>
+              <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.4185447620143!2d-70.62121594863191!3d-33.49048610686094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d006fa56ee51%3A0x81dacfbe20db68cf!2sUniversidad%20T%C3%A9cnica%20Federico%20Santa%20Mar%C3%ADa!5e0!3m2!1ses!2scl!4v1668653452861!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+            <div class="content price">
+          
+                  <div class="social box">
+                    <a href="https://www.facebook.com">
+                      <img src="img/fb.png" alt="">
+                    </a>
+                    <a href="https:/www.twitter.com">
+                      <img src="img/twitter.png" alt="">
+                    </a>
+                    <a href="https:/www.linkedin.com">
+                      <img src="img/linkedin.png" alt="">
+                    </a>
+                    <a href="https:/www.instagram.com">
+                      <img src="img/instagram.png" alt="">
+                    </a>
+                  </div>
+</body>
+
+</html>
