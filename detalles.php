@@ -2,7 +2,6 @@
 require "db/conexion.php";
 require "config/config.php";
 
-
 $id = isset($_GET["id"]) ? $_GET["id"] : "";
 $token = isset($_GET["token"]) ? $_GET["token"] : "";
 
@@ -78,44 +77,45 @@ if ($id == "" || $token == "") {
       <a href="index.html">Inicio</a>
       <a href="tienda.php">Tienda</a>
       <a href="#">Iniciar Sesión</a>
-      <a href="#" id="carrito">Carrito</a>
+      <a href="#" id="">Carrito <span id="carrito"><?php echo $carrito ?></span></a>
       <a href="#">Comprar</a>
     </nav>
   </div>
 
-  <main>
-    <div class="contenedor">
-
-      <div class="contenedor-conciertos">
-        <div class="card">
-          <img src="<?php echo $rutaImg ?>" alt="Foto" height="300px" style="border-radius: 30px;" />
-          <div class="textos">
-            <h2><?php echo $row["nombre"]; ?></h2>
-          </div>
-          <div>
-            <a href="#" class="btn-btn" style="background-color: green;">Comprar ahora</a>
-            <a href="#" class="btn-btn" onclick="agregarProducto(<?php echo $id; ?>,'<?php echo $token_tmp; ?>')">Agregar al carrito</a>
-          </div>
+  <main class="header-detalles">
+    <div class="contenedor-detalles">
+      <div class="card">
+        <div class="img-container">
+          <figure>
+            <img src="<?php echo $rutaImg ?>" alt="Foto" />
+          </figure>
         </div>
-
+        <div class="text-container">
+          <h2><?php echo $row["nombre"]; ?></h2>
+        </div>
+        <div class="btn-container">
+          <a href="#" class="btn-btn" style="background-color: green;">Comprar ahora</a>
+          <a href="#" class="btn-btn" onclick="agregarProducto(<?php echo $id; ?>,'<?php echo $token_tmp; ?>');">Agregar al carrito</a>
+        </div>
       </div>
-
-      <div class="contenedor-c">
-        <h3>Detalles del Producto</h3>
-        <div class="contenedor-cont">
+      <div class="card">
+        <h1>Detalles del Producto</h1>
+        <div>
           <h2><?php echo $row["descripcion"]; ?></h2>
         </div>
-        <div class="contenedor-cont">
-          <?php if ($descuento > 0) { ?>
-            <small>Antes</small>
-            <h2 style="color: red;"><del>$<?php echo $row["precio"]; ?></del></h2>
-            <small>Ahora</small>
-            <h2 style="color: green;">$<?php echo $precio_desc ?></h2>
-          <?php } else { ?>
-            <h2>$<?php echo $row["precio"] ?></h2>
-          <?php } ?>
-        </div>
+        <?php if ($descuento > 0) { ?>
+          <small>Antes</small>
+          <h2 style="color: red;"><del>$<?php echo $row["precio"]; ?></del></h2>
+          <small>Ahora</small>
+          <h2 style="color: green;">$<?php echo $precio_desc ?></h2>
+        <?php } else { ?>
+          <h2>$<?php echo $row["precio"] ?></h2>
+        <?php } ?>
+      </div>
+    </div>
   </main>
+
+
 
   <div class="content price">
 
@@ -133,23 +133,26 @@ if ($id == "" || $token == "") {
         <img src="img/instagram.png" alt="">
       </a>
     </div>
-    <script type="text/javascript">
-      function addProducto(id, token) {
-        let url = "./clases/carrito.php";
-        let formData = new FormData();
-        formData.append("id", id);
-        formData.append("token", token);
+
+    <script>
+      function agregarProducto(id, token) {
+        let url = 'clases/carrito.php'
+        let formData = new FormData()
+        formData.append('id', id)
+        formData.append('token', token)
+
         fetch(url, {
-          method: 'POST',
-          body: formData,
-          mode: 'cros'
-        }).then(response => response.json());
-        .then(data => {
-          if (data.ok) {
-            let elemento = document.getElementbyId("carrito");
-            elemento.innerHTML = data.numero;
-          }
-        })
+            method: 'POST',
+            body: formData,
+            mode: 'cors'
+          }).then(response => response.json())
+          .then(data => {
+            if (data.ok) {
+              let elemento = document.getElementById("carrito")
+              elemento.innerHTML = data.numero
+            }
+          })
+
       }
     </script>
 </body>

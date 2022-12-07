@@ -11,7 +11,9 @@ body {
     font-family: sans-serif;
 
 }
-
+img{
+    max-width: 100%;
+}
 .header {
     display: flex;
     justify-content: center;
@@ -48,16 +50,18 @@ body {
 
 .navbar a{
     display: block;
-    padding: 23px 20px;
+    padding: 19px 20px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
     font-family: 'Dancing Script', cursive;
+    transition: all .2s;
 }
 
 .navbar a:hover{
     background: rgb(61, 61, 61);
+
 }
 
 .header {
@@ -114,48 +118,12 @@ p {
     background: rgb(29, 28, 28);
 }
 
-.box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.box-container .box{
-    height: 11rem;
-    width: 17rem;
-    background: black;
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0 .3rem 5rem rgb(0, 0, 0, .5);
-    margin: 1rem ;
-}
-
-.box-container .box i {
-    height: 3rem;
-    width: 3rem;
-    text-align: center;
-    border-radius: 50%;
-    color: white;
-    background: violet;
-    font-size: 2rem;
-    margin: 1rem 0;
-    
-}
-
-.box-container .box h3{
-    font-size: 20px;
-    color: violet;
-
-}
-.box-container .box p{
-    padding: 0 15px;
-    font-size: 16px;
-}
-
 .about {
     background: black;
-
+    padding: 0 50px 0 50px;
+}
+.about h2{
+    margin-bottom: 15px;
 }
 .price {
     background: url(/img/price.jpg) no-repeat center;
@@ -163,10 +131,9 @@ p {
     background-size: cover;
     text-align: center;
 
-
-/*CONTACTO PARTE*/
-    
 }
+
+/*CONTACTO PARTE Index*/
 
 .contact_section {
     background-color: #000000;
@@ -190,10 +157,12 @@ p {
   
   .contact_section input {
     border: 1px solid rgb(255, 238, 238);
-    width: 90%;
+    width: 80%;
     margin: 10px;
     padding: 10px;
     background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
   }
   
   .contact_section input::-webkit-input-placeholder {
@@ -214,6 +183,13 @@ p {
   .contact_section input::placeholder {
     color: #595959;
     font-size: 14px;
+  }
+  .map-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .map-container iframe{
+    border-radius: 5px;
   }
   .contact_form-container button {
     border: none;
@@ -244,98 +220,96 @@ p {
 
   /*Fin Contacto*/
 
-  .contenedor { 
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;
-	padding: 70px 0;
-	display: flex;
-	gap: 20px;
-    
+
+
+  /* Tienda-Productos*/
+.header-tienda{
+    padding: 0 70px 0 70px;
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+
+.contenedor { 
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 20px;
+
 }
-.contenedor-conciertos {
-    height: max-content;
-	display: flex;
-	justify-content: space-around;
-	gap: 20px;
-    flex-wrap: wrap;
-    flex-grow: 1;
+.card{
+   border-radius: 10px;
 }
-.card {
-	background-color: rgb(190, 243, 247);
-	min-height: 200px;
-	font-weight: bold;
-    
-	padding: 20px;
-	position: relative;
-	overflow: hidden;
-	background-size: cover;
-	background-position: center center;
-	box-shadow:-1em 0 0.4em rgb(63, 63, 63);
-    border-radius: 28px;
-box-shadow: 10px 0px 14px 0px rgba(0,0,0,0.53);
+.card:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .20);
 }
-.card .textos {
-	height: 50px;
-	display: flex;
-	flex-direction: row;
-    justify-content: space-around;
-    font-family: 'Dancing Script', cursive;
-    font-size: 30px;
-    padding: 20px;
+
+.img-container img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
 }
-.textos{
+.card figure{
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+.card:hover img{
+    transform: scale(1.2);
+}
+.text-container {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px;
+    line-height: 2;
     display: flex;
-    background-color: rgb(129, 220, 220);
-    border-radius: 50px;
-    border: 1px solid rgb(73, 207, 228);
+    flex-direction: column;
+    gap: 10px;
 }
-.textos p{
-    justify-content: center;
-    padding-top: 15px;
-}
-.textos p{
+.text-container p{
+    font-size: 18px;
+    font-weight: 900;
     color: #000000;
 }
-.btn-btn {
-    border-radius: 10px;
+.btn-container{
+    padding: 15px 30px;
     display: flex;
-    margin-top: 5px;
-    padding: 10px;
-    color: white;
+    flex-direction: column;
+    gap: 10px;
+}
+.btn-container a{
     text-decoration: none;
-    background: rgb(0, 53, 112);
-    justify-content: center;
-    width: 95%;
-    
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 10px;
+    border-radius: 5px;
 }
-.contenedor-cont small{
-    font-weight: bold;
-    
-}
-
-.btn-btn:hover {
-    opacity: 90%;
-}
-
-.contenedor-cont{
-    display: flex;
-    width: 500px;
-    
-    padding: 20px;
-
-}
-.contenedor-cont h2{
-    display: flex;
-    width: 100%;
-    font-size: 40px;
-    font-family: 'Josefin Sans', sans-serif;
-    justify-content: center;
+.btn-container button{
+    text-decoration: none;
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.contenedor-c h3{ 
-    font-size: 50px;
+
+/* Fin Tienda-Productos */
+
+/* Detalles Productos */
+.header-detalles{
+    padding: 0 70px 0 70px;
+    padding-top: 6%;
+    padding-bottom: 6%;
 }
+.contenedor-detalles{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 20px;
+}
+
+
+/* Fin Detalle Productos */
+
 @media(max-width: 768px){
     .title{
         margin-bottom: 0 ;
@@ -346,5 +320,29 @@ box-shadow: 10px 0px 14px 0px rgba(0,0,0,0.53);
     }
     .navbar{
         display: none;
+    }
+    .contenedor-detalles{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    .header-detalles{
+        padding: 0 70px 0 70px;
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+    .header-tienda{
+        padding: 0 70px 0 70px;
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+    .map-container iframe{
+        width: 400px;
+        height: 400px;
     }
 }
