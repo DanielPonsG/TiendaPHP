@@ -28,9 +28,9 @@ $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <nav class="navbar">
       <a href="index.html">Inicio</a>
-      <a href="#">Tienda</a>
+      <a href="tienda.php">Tienda</a>
       <a href="#">Iniciar Sesión</a>
-      <a href="#" id="">Carrito <span id="carrito"><?php echo $carrito ?></span></a>
+      <a href="compra.php" id="">Carrito <span id="carrito"><?php echo $carrito ?></span></a>
       <a href="#">Comprar</a>
     </nav>
   </div>
