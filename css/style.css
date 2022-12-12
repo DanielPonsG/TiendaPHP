@@ -4,6 +4,7 @@
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+    font-family: "lato";
 }
 
 body {
@@ -25,7 +26,7 @@ img{
     align-items: center;
     justify-content: space-between;
     height: 63px;
-    background: #171717;
+    background: #111111;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -115,14 +116,15 @@ p {
 
 .sau {
     padding: 30px;
-    background: rgb(29, 28, 28);
+    background: #111111;
 }
 
 .about {
-    background: black;
+    background: #111111;
     padding: 0 50px 0 50px;
 }
 .about h2{
+    color: white;
     margin-bottom: 15px;
 }
 .price {
@@ -136,7 +138,7 @@ p {
 /*CONTACTO PARTE Index*/
 
 .contact_section {
-    background-color: #000000;
+    background-color: #111111;
   }
   
   .contact_section h2 {
@@ -200,6 +202,7 @@ p {
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
   }
   .contact_form-container button:hover {
     opacity: 80%;
@@ -264,11 +267,13 @@ p {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: "lato";
 }
 .text-container p{
     font-size: 18px;
     font-weight: 900;
     color: #000000;
+    
 }
 .btn-container{
     padding: 15px 30px;
@@ -282,6 +287,7 @@ p {
     color: #fff;
     padding: 15px 10px;
     border-radius: 5px;
+    font-family: "lato";
 }
 .btn-container button{
     text-decoration: none;
@@ -290,6 +296,7 @@ p {
     padding: 15px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "lato";
 }
 
 
@@ -305,6 +312,26 @@ p {
     display: grid;
     grid-template-columns: repeat(2,2fr);
     gap: 20px;
+}
+.card h1{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 10px;
+    font-family: "lato";
+}
+.contenedor-descripcion{
+    font-size: 15px;
+    font-family: "lato";
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.contenedor-descuento{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
+    justify-content: space-between;
 }
 
 

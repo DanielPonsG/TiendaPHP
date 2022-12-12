@@ -62,8 +62,8 @@ if ($id == "" || $token == "") {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
   <title>Catálogo</title>
 </head>
@@ -100,17 +100,29 @@ if ($id == "" || $token == "") {
         </div>
       </div>
       <div class="card">
-        <h1>Detalles del Producto</h1>
-        <div>
+        <h1>Detalles</h1>
+        <div class="contenedor-descripcion">
           <h2><?php echo $row["descripcion"]; ?></h2>
         </div>
         <?php if ($descuento > 0) { ?>
-          <small>Antes</small>
-          <h2 style="color: red;"><del>$<?php echo $row["precio"]; ?></del></h2>
-          <small>Ahora</small>
-          <h2 style="color: green;">$<?php echo $precio_desc ?></h2>
+          <div class="contenedor-descuentos">
+            <div class="contenedor-descuento">
+              <div class="descuento">
+                <small>Antes</small>
+                <h2 style="color: red;"><del>$<?php echo $row["precio"]; ?></del></h2>
+                <small>Ahora</small>
+                <h2 style="color: green;">$<?php echo $precio_desc ?></h2>
+              </div>
+              <div class="contenedor-porcentaje">
+                <small>Descuento</small>
+                <h2 style="color: green;"><?php echo $descuento ?>%</h2>
+              </div>
+            </div>
+          </div>
         <?php } else { ?>
-          <h2>$<?php echo $row["precio"] ?></h2>
+          <div class="contenedor-precio">
+            <h2>$<?php echo $row["precio"] ?></h2>
+          </div>
         <?php } ?>
       </div>
     </div>
@@ -119,7 +131,6 @@ if ($id == "" || $token == "") {
 
 
   <div class="content price">
-
     <div class="social box">
       <a href="https://www.facebook.com">
         <img src="img/fb.png" alt="">
