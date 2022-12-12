@@ -349,10 +349,33 @@ p {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-}
-.table caption{
+    transition: all .2s;
+    background-color: aliceblue;
     margin-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
+.table:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .20);
+    border-bottom-left-radius: 10px;
+}
+
+.table caption{
+    background-color: #00115c;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    transition: all .2s;
+}
+.table th{
+    padding-bottom: 10px;
+    background-color: #70bfff;
+}
+.table td{
+    padding: 10px;
+}
+
 
 /* Fin Carrito Productos*/
 /* Footer */
@@ -362,7 +385,6 @@ p {
     justify-content: space-around;
     gap: 40px;
 }
-
 /* Fin Footer*/
 @media(max-width: 768px){
     .title{
