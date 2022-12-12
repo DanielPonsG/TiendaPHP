@@ -106,7 +106,7 @@ if ($productos != null) {
     </main>
 
     <div class="content price">
-        <div class="social box">
+        <div class="social-box">
             <a href="https://www.facebook.com">
                 <img src="img/fb.png" alt="">
             </a>

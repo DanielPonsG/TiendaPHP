@@ -14,12 +14,14 @@ body {
 }
 img{
     max-width: 100%;
+    
 }
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .head {
     display: flex;
@@ -333,6 +335,10 @@ p {
     padding: 15px;
     justify-content: space-between;
 }
+.contenedor-precio h2{
+    font-weight: 600;
+    color: green;
+}
 
 
 /* Fin Detalle Productos */
@@ -349,7 +355,15 @@ p {
 }
 
 /* Fin Carrito Productos*/
+/* Footer */
+.social-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
 
+/* Fin Footer*/
 @media(max-width: 768px){
     .title{
         margin-bottom: 0 ;
