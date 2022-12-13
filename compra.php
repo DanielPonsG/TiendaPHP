@@ -78,11 +78,11 @@ if ($productos != null) {
                                 <tr class="contenedor-datos">
                                     <td><?php echo $nombre; ?></td>
                                     <td>$ <?php echo $precio_desc; ?></td>
-                                    <td><input type="number" min="1" max="10" step="1" value="<?php echo $cantidad; ?>" size="5" id="cantidad_<?php echo $_id ?>" onchange="actualizaCantidad(this.value,<?php echo $_id; ?>)"></input></td>
+                                    <td><input class="cantidad" type="number" min="1" max="10" step="1" value="<?php echo $cantidad; ?>" size="5" id="cantidad_<?php echo $_id ?>" onchange="actualizaCantidad(this.value, <?php echo $_id; ?>)"></input></td>
                                     <td>
                                         <div id="<?php echo $_id; ?>" name="subtotal">$ <?php echo $subtotal; ?></div>
                                     </td>
-                                    <td><button>Eliminar</button></td>
+                                    <td><button class="btn-eliminar">Eliminar</button></td>
                                 </tr>
                             <?php } ?>
                         <?php } ?>
@@ -96,7 +96,7 @@ if ($productos != null) {
                     <p style="color: black">Total : $ <?php echo $total ?></p>
                     <div>
                         <div class="button-container">
-                            <button class="button">Realizar pago</button>
+                            <button class="button-pago">Realizar pago</button>
                         </div>
                     </div>
                 <?php } ?>
