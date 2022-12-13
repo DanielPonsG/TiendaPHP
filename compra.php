@@ -89,7 +89,6 @@ if ($productos != null) {
                     </tbody>
                 </table>
                 <?php if ($lista_carrito == null) {
-                    
                 } else {
 
                 ?>
@@ -139,8 +138,8 @@ if ($productos != null) {
                 }).then(response => response.json())
                 .then(data => {
                     if (data.ok) {
-                        let elemento = document.getElementById("carrito")
-                        elemento.innerHTML = data.numero
+                        let divsubtotal = document.getElementById('subtotal_' + id)
+                        divsubtotal.innerHTML = data.sub
                     }
                 })
 

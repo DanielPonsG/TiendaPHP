@@ -1,4 +1,5 @@
 <?php
+
 $host = 'localhost';
 $dbname = 'tienda';
 $username = 'root';
@@ -9,4 +10,5 @@ try {
 } catch (PDOException $pe) {
     die("Could not connect to the database $dbname :" . $pe->getMessage());
 }
+
 ?>

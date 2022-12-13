@@ -69,8 +69,9 @@ img{
 }
 
 .header {
-    height: 60vh !important;
+    height: 600px !important;
     background: url(/Tienda-master/img/header.png) no-repeat center;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -91,14 +92,14 @@ p {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 40px;
-    border: 2px solid rgb(20, 70, 128);
     color: white;
     text-decoration: none;
-    background: rgb(6, 67, 136);
+    background: rgb(0, 46, 99);
+    border-radius: 20px;
 }
 
 .btn:hover {
-    opacity: 90%;
+    background: rgb(0, 31, 66);
 }
 
 .btn-home {
