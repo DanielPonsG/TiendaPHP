@@ -64,7 +64,8 @@ img{
 
 .navbar a:hover{
     background: rgb(61, 61, 61);
-
+    border-radius: 5px;
+    padding: 15px;
 }
 
 .header {
@@ -386,6 +387,13 @@ p {
     flex-direction: row;
     justify-content: space-around;
     gap: 40px;
+    
+}
+.social-box a{
+    transition: all .1s;
+}
+.social-box a:hover{
+    transform: scale(1.3);
 }
 /* Fin Footer*/
 @media(max-width: 768px){
