@@ -350,7 +350,7 @@ p {
     width: 100%;
     border-collapse: collapse;
     transition: all .2s;
-    background-color: aliceblue;
+    background-color: #f0f0f0;
     margin-bottom: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -361,16 +361,18 @@ p {
 }
 
 .table caption{
-    background-color: #00115c;
+    background-color: #f0f0f0;
     padding: 10px;
     font-weight: bold;
-    color: #fff;
+    color: rgb(0, 0, 0);
     border-radius: 10px 10px 0 0;
     transition: all .2s;
+    font-size: 20px;
 }
 .table th{
+    padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #70bfff;
+    background-color: #fdff9c;
 }
 .table td{
     padding: 10px;

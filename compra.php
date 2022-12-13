@@ -88,12 +88,18 @@ if ($productos != null) {
                         <?php } ?>
                     </tbody>
                 </table>
-                <p style="color: black">Total : $ <?php echo $total ?></p>
-                <div>
-                    <div class="button-container">
-                        <button class="button">Realizar pago</button>
+                <?php if ($lista_carrito == null) {
+                    
+                } else {
+
+                ?>
+                    <p style="color: black">Total : $ <?php echo $total ?></p>
+                    <div>
+                        <div class="button-container">
+                            <button class="button">Realizar pago</button>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
 
